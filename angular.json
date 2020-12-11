@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "demoang"
+    }
+  },
+  "defaultProject": "demoang",
+  "cli": {
+    "analytics": false
+  }
 }

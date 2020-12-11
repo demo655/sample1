@@ -1,1 +1,19 @@
 {{title}}
+<div>
+<label>Number1</label>
+<input type='number' #num1>
+
+<label>Number2</label>
+<input type='number' #num2>
+</div>
+
+<div>
+    <button (click)='add(num1.value,num2.value)'>Add</button>
+    <button (click)='multiply(num1.value,num2.value)'>Multiply</button>
+    <button  (click)='subtract(num1.value,num2.value)'>Subtract</button>
+    <button (click)='divide(num1.value,num2.value)'>Divide</button>
+    </div>
+
+    <div>
+        {{result}}
+        </div>
