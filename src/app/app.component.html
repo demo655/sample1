@@ -1,1 +1,43 @@
 {{title}}
+
+<div>
+    <h2>SeqOutput</h2>
+    {{seqResult}}
+    </div>
+<div>
+    <label>Enter the index of The sequence</label>
+<input type="text" #seqindex placeholder="enterIndex">
+<button (click)='getSequenceNumber(seqindex.value)'>GetNumber</button>
+
+</div>
+
+<h2>Phone </h2>
+<form [formGroup]='form' (ngSubmit)='onSubmit()'>
+    <div formArrayName='phoneDetails' >
+        <div *ngFor='let phone of phoneDetails.controls;let i=index '>
+            <input type="text"  [formControlName]='i' placeholder='EnterPhoneNumber'>
+            <button *ngIf='phoneDetails.value.length>1' (click)='deleteField(i)'>DeleteField</button>
+            
+        </div>
+        </div>
+
+        <button>Submit</button>
+    </form>
+
+    <div>
+        <button (click)='addAnother()'>AddAnotherPhoneNumber</button>
+        </div>
+
+
+        <div>
+            <h1>Sharing Data </h1>
+
+            <app-one></app-one>
+            <app-two></app-two>
+            <app-three></app-three>
+            <app-four></app-four>
+            <app-data-share></app-data-share>
+
+
+            </div>
+
